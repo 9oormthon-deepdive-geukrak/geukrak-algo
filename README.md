@@ -1,4 +1,4 @@
-# algo-2
+# geukrak-algo
 구름톤 딥다이브 극樂 알고리즘 스터디
 
 <br />
