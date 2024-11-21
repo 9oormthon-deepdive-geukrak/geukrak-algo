@@ -34,7 +34,7 @@ function dijsktra(maps, start, end) {
     pq.sort((a, b) => b[2] - a[2]);
     const [r, c, cost, direction] = pq.pop();
 
-    if (distance[r][c][direction] > cost) continue;
+    if (distance[r][c][direction] < cost) continue;
     if (r === end[0] && c === end[1]) return distance[r][c][direction];
 
     for (const [dr, dc, dd] of DIRECTION) {
