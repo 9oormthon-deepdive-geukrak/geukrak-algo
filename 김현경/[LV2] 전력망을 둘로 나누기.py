@@ -22,12 +22,14 @@ def solution(n, wires):
         graph[a].append(b)
         graph[b].append(a)
     
+    
     res = n
     for a, b in wires:
         graph[a].remove(b)
         graph[b].remove(a)
         
-        res = min(abs(bfs(a, graph) - bfs(b, graph)), res)
+        network_size = bfs(a, graph)
+        res = min(abs(network_size - (n - network_size)), res)
         
         graph[a].append(b)
         graph[b].append(a)
