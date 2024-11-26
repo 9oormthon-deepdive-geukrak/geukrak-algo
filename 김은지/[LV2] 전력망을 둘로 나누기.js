@@ -34,7 +34,7 @@ function dfs(n, graph) {
 
 function solution(n, wires) {
   let minDiff = Number.POSITIVE_INFINITY;
-  for (let i = 0; i < n; i++) {
+  for (let i = 0; i < wires.length; i++) {
     minDiff = Math.min(minDiff, Math.abs(n - 2 * dfs(n, getGraph(n, getDividedNetwork(wires, i)))));
   }
   return minDiff;
