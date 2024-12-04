@@ -41,8 +41,6 @@ function calculateFriendsNeeded(expandedWeak, start, friends) {
 function solution(n, weak, dist) {
   const expandedWeak = expandWeakPoints(weak, n);
 
-  dist.sort((a, b) => b - a);
-
   let minFriends = dist.length + 1;
 
   const allPermutations = generatePermutations(dist);
