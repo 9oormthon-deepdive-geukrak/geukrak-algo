@@ -40,11 +40,9 @@ function calculateFriendsNeeded(expandedWeak, start, friends) {
 
 function solution(n, weak, dist) {
   const expandedWeak = expandWeakPoints(weak, n);
-
-  let minFriends = dist.length + 1;
-
   const allPermutations = generatePermutations(dist);
 
+  let minFriends = dist.length + 1;
   // 모든 시작 지점과 친구 배치에 대해 탐색
   for (let start = 0; start < weak.length; start++) {
     for (const friends of allPermutations) {
