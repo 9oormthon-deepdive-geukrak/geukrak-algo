@@ -32,7 +32,7 @@ function backtrack(board, aloc, bloc, turn, moveCount) {
     return [false, moveCount];
 
   let canWin = false;
-  let minMovesToWin = Infinity;
+  let minMovesToWin = Number.POSITIVE_INFINITY;
   let maxMovesToLose = 0;
   let hasValidMove = false;
 
